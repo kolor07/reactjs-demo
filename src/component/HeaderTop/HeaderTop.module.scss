@@ -1,0 +1,219 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../GlobalStyles/GlobalStyles.scss';
+
+.header_top {
+    border: 1px solid #eee;
+    .container {
+        max-width: 1200px;
+    }
+    & span {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .header_contact_us {
+        & li {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.3rem;
+        }
+        & .phone_icon,
+        .email_icon {
+            margin-right: 5px;
+            color: rgba(21, 8, 8, 0.5);
+        }
+    }
+    .header_account_area {
+        & ul:first-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        & li {
+            display: inline-block;
+            position: relative;
+            padding: 0 20px;
+            border-left: 1px solid #eee;
+            cursor: pointer;
+            & a {
+                font-size: 1.3rem;
+                line-height: 40px;
+                text-transform: uppercase;
+                font-weight: 400;
+
+                &:hover {
+                    // color: #febc8b;
+                    color: $primary;
+                }
+            }
+
+            &:last-child {
+                border-right: 1px solid #eee;
+            }
+        }
+
+        .language_currency {
+            position: relative;
+            display: list-item;
+            &:hover {
+                & .dropdown_language {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .language_currency_icon {
+                font-size: 1.2rem;
+                color: rgba(21, 8, 8, 0.5);
+                margin-left: 3px;
+            }
+            & .dropdown_language {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                min-width: 150px;
+                background-color: #fff;
+                border: 1px solid #ededed;
+                text-align: left;
+                overflow: hidden;
+                z-index: 999;
+
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 1s ease, opacity 1s ease;
+
+                & li {
+                    border-left: none;
+                    height: 28px;
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// // for mobile phone
+@include media-breakpoint-only(xs) {
+    .header_top {
+        padding: 18px 0 20px;
+        .header_contact_us {
+            padding: 0;
+            text-align: center;
+            padding: 10px 10px;
+            & li {
+                font-size: 1.5rem;
+
+                & a {
+                    font-size: inherit;
+                }
+            }
+        }
+
+        .header_account_area {
+            & ul:first-child {
+                justify-content: center;
+            }
+
+            & li {
+                padding: 0 10px;
+                & a {
+                    line-height: 30px;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+// // for mobile phone
+@include media-breakpoint-only(sm) {
+    .header_top {
+        padding: 18px 0 20px;
+        .header_contact_us {
+            padding: 5px 0;
+
+            text-align: center;
+            padding: 10px 10px;
+            & li {
+                font-size: 1.5rem;
+
+                & a {
+                    font-size: inherit;
+                }
+            }
+        }
+
+        .header_account_area {
+            & ul:first-child {
+                justify-content: center;
+            }
+
+            & li {
+                padding: 0 10px;
+                & a {
+                    line-height: 30px;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+// for tablet
+@include media-breakpoint-only(md) {
+    .header_top {
+        padding: 18px 0 20px;
+        .header_contact_us {
+            padding: 5px 0;
+            text-align: center;
+            padding: 10px 10px;
+            & li {
+                font-size: 1.5rem;
+
+                & a {
+                    font-size: inherit;
+                }
+            }
+        }
+
+        .header_account_area {
+            & ul:first-child {
+                justify-content: center;
+            }
+
+            & li {
+                & a {
+                    padding-bottom: 10px;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    // to-check
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+
+// // tablet with wide screen or pc ,laptop
+// // dont need because it was handled above
+// @include media-breakpoint-only(lg) {
+//     .header_top {
+//         background-color: red;
+//     }
+// }
+
+// // pc , laptop with wide screen
+// @include media-breakpoint-only(xl) {
+//     .header_top {
+//         background-color: red;
+//     }
+// }
+
+// // for TV screen only maybe
+// @include media-breakpoint-only(xxl) {
+//     .header_top {
+//         background-color: red;
+//     }
+// }

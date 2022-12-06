@@ -1,0 +1,54 @@
+@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.single-slide {
+    width: 100%;
+    height: 600px;
+
+    background-image: url('https://htmldemo.net/classico/classico/assets/img/slider/slider1.jpg'),
+        url('https://w.ladicdn.com/s1300x950/5eec6e51ff2cde1211a0f260/93409433_2789121347859945_4018806671303245824_o-20220916024127-hfoqx.jpg'),
+        url('https://htmldemo.net/classico/classico/assets/img/slider/slider2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-attachment: scroll;
+    background-size: cover;
+
+    .slide-content {
+        height: auto;
+        padding-left: 30px;
+        & h1 {
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            color: #0049b7;
+        }
+        & h2 {
+            font-size: 2.2rem;
+            line-height: 24px;
+            margin-bottom: 11px;
+            font-weight: 400;
+            color: #8458b3;
+            text-transform: uppercase;
+        }
+        & p {
+            font-size: 1.7rem;
+            line-height: 28px;
+            padding: 23px 0 34px;
+            margin-bottom: 0;
+        }
+        & a {
+            background: #ff1d58;
+            color: #eee;
+            border: none;
+            box-shadow: -8px 10px 34px -10px rgba(0, 0, 0, 0.71);
+            -webkit-box-shadow: -8px 10px 34px -10px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: -8px 10px 34px -10px rgba(0, 0, 0, 0.71);
+
+            transition: font-size 0.3s linear;
+            &:hover {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}

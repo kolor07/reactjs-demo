@@ -1,0 +1,181 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../GlobalStyles/GlobalStyles.scss';
+
+.header_middle {
+    // border: 1px solid green;
+    padding: 34px 0;
+
+    & .col_canvas_menu {
+        display: none;
+    }
+    .header_logo {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    & .header_search_box {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8px;
+        border: 1px solid #eee;
+        background: #fbfbfb;
+        width: 376px;
+
+        & .search {
+            height: 36px;
+            padding: 0 43px 0 14px;
+            font-size: 1.6rem;
+            line-height: 36px;
+            background: inherit;
+            font-weight: 400;
+            color: rgba(16, 18, 23, 0.9);
+            &::placeholder {
+                color: rgba(16, 18, 23, 0.7);
+                opacity: 1;
+                font-weight: 400;
+            }
+        }
+        & button {
+            cursor: pointer;
+            background: #fbfbfb;
+            width: 36px;
+            height: 36px;
+        }
+        & .search-icon {
+            background: inherit;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+    & .mini_cart_wrapper {
+        text-align: right;
+        line-height: 38px;
+        & a {
+            position: relative;
+            // &:hover {
+            //     cursor: pointer;
+            // }
+        }
+
+        & .cart_icon {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-right: 12px;
+            transition: font-size 0.5 linear;
+            color: #00ddff;
+            box-shadow: -8px 10px 34px -10px rgba(0, 0, 0, 0.71);
+            -webkit-box-shadow: -8px 10px 34px -10px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: -8px 10px 34px -10px rgba(0, 0, 0, 0.71);
+            &:hover {
+                color: #ff1d58;
+                font-size: 2.6rem;
+            }
+        }
+
+        & .cart-text {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #232323;
+            &:hover {
+                color: #ff1d58;
+            }
+        }
+        & .cart_items-count {
+            position: absolute;
+            top: -10px;
+            left: 25px;
+            width: 20px;
+            height: 20px;
+            line-height: 17px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50%;
+            text-align: center;
+            color: #fff;
+            background: #0049b7;
+            z-index: 9;
+        }
+    }
+}
+
+// Medium devices (tablets,from 768px and less than 992px)
+@include media-breakpoint-only(md) {
+    .header_middle {
+        & .col_search_area {
+            // display: none;
+            display: none !important;
+        }
+        & .col_canvas_menu {
+            display: block;
+
+            & .canvas_menu-open {
+                font-size: 27px;
+                width: 41px;
+                height: 37px;
+                display: block;
+                line-height: 37px;
+                text-align: center;
+                border: 1px solid $text-color;
+                color: $text-color;
+            }
+        }
+        & .home-logo {
+            & .header_logo {
+                padding-left: 35px;
+            }
+        }
+    }
+}
+// Small devices (landscape phones, from 576px and less than 768px)
+@include media-breakpoint-only(sm) {
+    .header_middle {
+        .row {
+            margin: 0;
+        }
+        & .col_search_area {
+            display: none;
+        }
+        & .col_canvas_menu {
+            display: block;
+
+            & .canvas_menu-open {
+                font-size: 27px;
+                width: 41px;
+                height: 37px;
+                display: block;
+                line-height: 37px;
+                text-align: center;
+                border: 1px solid $text-color;
+                color: $text-color;
+            }
+        }
+    }
+}
+// Medium devices (tablets, less than 576)
+@include media-breakpoint-only(xs) {
+    .header_middle {
+        & .row {
+            margin: 0;
+            border: 1px solid red;
+        }
+        & .col_search_area {
+            // display: none;
+            display: none !important;
+        }
+        & .col_canvas_menu {
+            display: block;
+
+            & .canvas_menu-open {
+                font-size: 27px;
+                width: 41px;
+                height: 37px;
+                display: block;
+                line-height: 37px;
+                text-align: center;
+                border: 1px solid $text-color;
+                color: $text-color;
+            }
+        }
+    }
+}
